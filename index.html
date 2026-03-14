@@ -151,6 +151,38 @@
         gap: 10px;
       }
 
+      .lang-switcher {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        font-weight: 500;
+      }
+
+      .lang-switcher button {
+        background: none;
+        border: none;
+        padding: 8px 10px;
+        color: rgba(20, 20, 20, 0.5);
+        cursor: pointer;
+        font: inherit;
+        transition: color 180ms ease;
+      }
+
+      .lang-switcher button:hover {
+        color: rgba(20, 20, 20, 0.85);
+      }
+
+      .lang-switcher button.active {
+        color: rgba(20, 20, 20, 0.95);
+      }
+
+      .lang-switcher span {
+        color: rgba(20, 20, 20, 0.25);
+        pointer-events: none;
+      }
+
       .btn {
         display: inline-flex;
         align-items: center;
@@ -794,7 +826,7 @@
   </head>
 
   <body>
-    <a class="skip-link" href="#icerik">İçeriğe atla</a>
+    <a class="skip-link" href="#icerik" data-tr="İçeriğe atla" data-en="Skip to content">İçeriğe atla</a>
 
     <header class="nav" id="ust">
       <div class="container nav-inner" id="navRoot">
@@ -808,17 +840,22 @@
         </button>
 
         <nav class="nav-links" aria-label="Sayfa menüsü" id="navLinks">
-          <a href="#hakkimda">Ben Kimim</a>
-          <a href="#yaklasim">Yaklaşımım</a>
-          <a href="#hizmetler">Hizmetler</a>
-          <a href="#projeler">Seçilmiş Projeler</a>
-          <a href="#surec">Nasıl Çalışıyorum</a>
-          <a href="#iletisim">İletişim</a>
+          <a href="#ust" data-tr="Anasayfa" data-en="Home">Anasayfa</a>
+          <a href="#hakkimda" data-tr="Hakkımda" data-en="About">Hakkımda</a>
+          <a href="#yaklasim" data-tr="Yaklaşımım" data-en="Approach">Yaklaşımım</a>
+          <a href="#hizmetler" data-tr="Hizmetler" data-en="Services">Hizmetler</a>
+          <a href="#projeler" data-tr="Projeler" data-en="Projects">Projeler</a>
+          <a href="#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a>
         </nav>
 
         <div class="nav-actions">
-          <a class="btn btn-primary" href="#iletisim">Görüşme Planla</a>
-          <a class="btn" href="#hizmetler">Hizmetleri İncele</a>
+          <div class="lang-switcher" role="group" aria-label="Dil seçimi">
+            <button type="button" data-lang="tr" class="active" aria-pressed="true">TR</button>
+            <span aria-hidden="true">|</span>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+          <a class="btn btn-primary" href="#iletisim" data-tr="Görüşme Planla" data-en="Schedule a Call">Görüşme Planla</a>
+          <a class="btn" href="#hizmetler" data-tr="Hizmetleri İncele" data-en="Explore Services">Hizmetleri İncele</a>
         </div>
       </div>
     </header>
@@ -827,13 +864,13 @@
       <section class="hero">
         <div class="container hero-grid">
           <div>
-            <div class="eyebrow"><i aria-hidden="true"></i> Marina Feden</div>
-            <h1>Projenizi Dijital Dünyaya Taşıyalım</h1>
-            <p class="subtitle">Her markanın kendi hikayesi vardır. Sizinkini konuşalım.</p>
-            <div class="pro-title">Dijital Stratejist &amp; Kurumsal İtibar Danışmanı</div>
+            <div class="eyebrow" data-tr="Marina Feden" data-en="Marina Feden"><i aria-hidden="true"></i> Marina Feden</div>
+            <h1 data-tr="Projenizi Dijital Dünyaya Taşıyalım" data-en="Position Your Brand in the Digital World">Projenizi Dijital Dünyaya Taşıyalım</h1>
+            <p class="subtitle" data-tr="Her markanın kendi hikayesi vardır. Sizinkini konuşlım." data-en="Every brand has its own story. Let's talk about yours.">Her markanın kendi hikayesi vardır. Sizinkini konuşlım.</p>
+            <div class="pro-title" data-tr="Dijital Stratejist & Kurumsal İtibar Danışmanı" data-en="Digital Strategist & Corporate Reputation Consultant">Dijital Stratejist &amp; Kurumsal İtibar Danışmanı</div>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#iletisim">Görüşme Planla</a>
-              <a class="btn" href="#hizmetler">Hizmetleri İncele</a>
+              <a class="btn btn-primary" href="#iletisim" data-tr="Görüşme Planla" data-en="Schedule a Call">Görüşme Planla</a>
+              <a class="btn" href="#hizmetler" data-tr="Hizmetleri İncele" data-en="Explore Services">Hizmetleri İncele</a>
             </div>
           </div>
 
@@ -847,16 +884,16 @@
         <div class="container">
           <div class="section-head">
             <div>
-              <h2>Ben Kimim</h2>
+              <h2 data-tr="Ben Kimim" data-en="About">Ben Kimim</h2>
             </div>
           </div>
           <div class="panel">
             <p class="lead">
-              Kurumsal yapılarda edindiğim deneyimi, bugün markaların dijital dünyada daha güçlü, daha net ve daha itibarlı bir
-              konum elde etmesine yardımcı olmak için kullanıyorum.
+              <span data-tr="Kurumsal yapılarda edindiğim deneyimi, bugün markaların dijital dünyada daha güçlü, daha net ve daha itibarlı bir konum elde etmesine yardımcı olmak için kullanıyorum." data-en="I use the experience I gained in corporate environments to help brands build a stronger, clearer, and more reputable position in the digital world today.">Kurumsal yapılarda edindiğim deneyimi, bugün markaların dijital dünyada daha güçlü, daha net ve daha itibarlı bir konum elde etmesine yardımcı olmak için kullanıyorum.</span>
               <br />
-              Benim için dijital iletişim yalnızca görünür olmak değil, markanın kimliğini, değerini ve hikâyesini doğru şekilde
-              yansıtabilmektir.
+              <span data-tr="Benim için dijital iletişim yalnızca görünür olmak değil, markanın kimliğini, değerini ve hikâyesini doğru şekilde yansıtabilmektir." data-en="For me, digital communication is not only about visibility; it is about reflecting a brand's identity, value, and story in the right way.">Benim için dijital iletişim yalnızca görünür olmak değil, markanın kimliğini, değerini ve hikâyesini doğru şekilde yansıtabilmektir.</span>
+              <br />
+              <span data-tr="Her projeye önce dinleyerek ve markanın özünü anlamaya çalışarak başlıyorum." data-en="I begin every project by listening first and seeking to understand the essence of the brand.">Her projeye önce dinleyerek ve markanın özünü anlamaya çalışarak başlıyorum.</span>
             </p>
           </div>
         </div>
@@ -866,22 +903,22 @@
         <div class="container">
           <div class="section-head">
             <div>
-              <h2>Yaklaşımım</h2>
+              <h2 data-tr="Yaklaşımım" data-en="Approach">Yaklaşımım</h2>
             </div>
           </div>
 
           <div class="grid-3">
             <article class="card">
-              <h3>Dinlemek</h3>
-              <p>Her iş birliği, markayı ve ihtiyaçlarını gerçekten anlamakla başlar.</p>
+              <h3 data-tr="Dinlemek" data-en="Listening">Dinlemek</h3>
+              <p data-tr="Her iş birliği, markayı ve ihtiyaçlarını gerçekten anlamakla başlar." data-en="Every collaboration begins with truly understanding the brand and its needs.">Her iş birliği, markayı ve ihtiyaçlarını gerçekten anlamakla başlar.</p>
             </article>
             <article class="card">
-              <h3>Strateji Kurmak</h3>
-              <p>Doğru dijital varlık, net bir bakış açısı ve güçlü bir strateji ile şekillenir.</p>
+              <h3 data-tr="Strateji Kurmak" data-en="Building Strategy">Strateji Kurmak</h3>
+              <p data-tr="Doğru dijital varlık, net bir bakış açısı ve güçlü bir strateji ile şekillenir." data-en="A strong digital presence is shaped by a clear perspective and a solid strategy.">Doğru dijital varlık, net bir bakış açısı ve güçlü bir strateji ile şekillenir.</p>
             </article>
             <article class="card">
-              <h3>Hikâyeyi Anlatmak</h3>
-              <p>Her marka, kendine özgü hikâyesini doğru anlattığında gerçek bir bağ kurar.</p>
+              <h3 data-tr="Hikâyeyi Anlatmak" data-en="Telling the Story">Hikâyeyi Anlatmak</h3>
+              <p data-tr="Her marka, kendine özgü hikâyesini doğru anlattığında gerçek bir bağ kurar." data-en="Every brand creates a real connection when it tells its unique story in the right way.">Her marka, kendine özgü hikâyesini doğru anlattığında gerçek bir bağ kurar.</p>
             </article>
           </div>
         </div>
@@ -891,28 +928,26 @@
         <div class="container">
           <div class="section-head">
             <div>
-              <h2>Hizmetler</h2>
+              <h2 data-tr="Hizmetler" data-en="Services">Hizmetler</h2>
             </div>
           </div>
 
           <div class="grid-2">
             <article class="card">
-              <h3>Dijital Marka Konumlandırması</h3>
-              <p>Markanızın dijital dünyadaki yerini netleştiren, güçlü ve sürdürülebilir bir konumlandırma yaklaşımı.</p>
+              <h3 data-tr="Dijital Marka Konumlandırması" data-en="Digital Brand Positioning">Dijital Marka Konumlandırması</h3>
+              <p data-tr="Markanızın dijital dünyadaki yerini netleştiren, güçlü ve sürdürülebilir bir konumlandırma yaklaşımı." data-en="A strong and sustainable positioning approach that clarifies your brand's place in the digital world.">Markanızın dijital dünyadaki yerini netleştiren, güçlü ve sürdürülebilir bir konumlandırma yaklaşımı.</p>
             </article>
             <article class="card">
-              <h3>İçerik ve İletişim Stratejisi</h3>
-              <p>
-                Marka dilinizi, mesaj yapınızı ve dijital iletişim yönünüzü daha tutarlı hale getiren stratejik içerik yaklaşımı.
-              </p>
+              <h3 data-tr="İçerik ve İletişim Stratejisi" data-en="Content and Communication Strategy">İçerik ve İletişim Stratejisi</h3>
+              <p data-tr="Marka dilinizi, mesaj yapınızı ve dijital iletişim yönünüzü daha tutarlı hale getiren stratejik içerik yaklaşımı." data-en="A strategic content approach that brings more consistency to your brand voice, messaging structure, and digital communication direction.">Marka dilinizi, mesaj yapınızı ve dijital iletişim yönünüzü daha tutarlı hale getiren stratejik içerik yaklaşımı.</p>
             </article>
             <article class="card">
-              <h3>Kurumsal İtibar ve Dijital İmaj</h3>
-              <p>Markanızın dışarıdan nasıl algılandığını güçlendiren, güven ve profesyonellik odaklı danışmanlık.</p>
+              <h3 data-tr="Kurumsal İtibar ve Dijital İmaj" data-en="Corporate Reputation and Digital Image">Kurumsal İtibar ve Dijital İmaj</h3>
+              <p data-tr="Markanızın dışarıdan nasıl algılandığını güçlendiren, güven ve profesyonellik odaklı danışmanlık." data-en="Consulting focused on trust and professionalism that strengthens how your brand is perceived externally.">Markanızın dışarıdan nasıl algılandığını güçlendiren, güven ve profesyonellik odaklı danışmanlık.</p>
             </article>
             <article class="card">
-              <h3>Web Sitesi İçerik Kurgusu</h3>
-              <p>Web sitenizin metin yapısını, mesaj akışını ve marka anlatımını daha etkili hale getiren içerik kurgusu.</p>
+              <h3 data-tr="Web Sitesi İçerik Kurgusu" data-en="Website Content Architecture">Web Sitesi İçerik Kurgusu</h3>
+              <p data-tr="Web sitenizin metin yapısını, mesaj akışını ve marka anlatımını daha etkili hale getiren içerik kurgusu." data-en="Content structuring that makes your website's messaging flow, copy structure, and brand narrative more effective.">Web sitenizin metin yapısını, mesaj akışını ve marka anlatımını daha etkili hale getiren içerik kurgusu.</p>
             </article>
           </div>
         </div>
@@ -922,22 +957,22 @@
         <div class="container">
           <div class="section-head">
             <div>
-              <h2>Seçilmiş Projeler</h2>
+              <h2 data-tr="Seçilmiş Projeler" data-en="Selected Projects">Seçilmiş Projeler</h2>
             </div>
           </div>
 
           <div class="panel">
-            <p class="lead">Farklı sektörlerde, her markanın ihtiyacına özel stratejik çözümler geliştiriyorum.</p>
+            <p class="lead" data-tr="Farklı sektörlerde, her markanın ihtiyacına özel stratejik çözümler geliştiriyorum." data-en="I develop strategic solutions tailored to the unique needs of each brand across different sectors.">Farklı sektörlerde, her markanın ihtiyacına özel stratejik çözümler geliştiriyorum.</p>
             <div style="height: 18px"></div>
             <div class="grid-3">
               <article class="card" style="min-height: 120px">
-                <h3>HoReCa</h3>
+                <h3 data-tr="Restoran ve Hospitality" data-en="Restaurants and Hospitality">Restoran ve Hospitality</h3>
               </article>
               <article class="card" style="min-height: 120px">
-                <h3>Hukuk ve Profesyonel Hizmetler</h3>
+                <h3 data-tr="Hukuk ve Profesyonel Hizmetler" data-en="Law and Professional Services">Hukuk ve Profesyonel Hizmetler</h3>
               </article>
               <article class="card" style="min-height: 120px">
-                <h3>Sanayi ve İş Dünyası Markaları</h3>
+                <h3 data-tr="Sanayi ve İş Dünyası Markaları" data-en="Industrial and Business Brands">Sanayi ve İş Dünyası Markaları</h3>
               </article>
             </div>
           </div>
@@ -948,32 +983,30 @@
         <div class="container">
           <div class="section-head">
             <div>
-              <h2>Nasıl Çalışıyorum</h2>
+              <h2 data-tr="Nasıl Çalışıyorum" data-en="How I Work">Nasıl Çalışıyorum</h2>
             </div>
           </div>
 
           <div class="steps">
             <article class="step">
               <div class="step-num">01</div>
-              <h3>Tanışma</h3>
-              <p class="lead" style="font-size: 14px; margin: 0">Öncelikle markanızı, ihtiyaçlarınızı ve hedeflerinizi dinliyorum.</p>
+              <h3 data-tr="Tanışma" data-en="Introduction">Tanışma</h3>
+              <p class="lead" style="font-size: 14px; margin: 0" data-tr="Öncelikle markanızı, ihtiyaçlarınızı ve hedeflerinizi dinliyorum." data-en="First, I listen to your brand, your needs, and your goals.">Öncelikle markanızı, ihtiyaçlarınızı ve hedeflerinizi dinliyorum.</p>
             </article>
             <article class="step">
               <div class="step-num">02</div>
-              <h3>Analiz</h3>
-              <p class="lead" style="font-size: 14px; margin: 0">
-                Mevcut dijital görünümünüzü ve iletişim yapınızı birlikte değerlendiriyorum.
-              </p>
+              <h3 data-tr="Analiz" data-en="Analysis">Analiz</h3>
+              <p class="lead" style="font-size: 14px; margin: 0" data-tr="Mevcut dijital görünümünüzü ve iletişim yapınızı birlikte değerlendiriyorum." data-en="I evaluate your current digital presence and communication structure.">Mevcut dijital görünümünüzü ve iletişim yapınızı birlikte değerlendiriyorum.</p>
             </article>
             <article class="step">
               <div class="step-num">03</div>
-              <h3>Strateji</h3>
-              <p class="lead" style="font-size: 14px; margin: 0">Markanıza özel, net ve uygulanabilir bir yol haritası oluşturuyorum.</p>
+              <h3 data-tr="Strateji" data-en="Strategy">Strateji</h3>
+              <p class="lead" style="font-size: 14px; margin: 0" data-tr="Markanıza özel, net ve uygulanabilir bir yol haritası oluşturuyorum." data-en="I create a clear and applicable roadmap tailored to your brand.">Markanıza özel, net ve uygulanabilir bir yol haritası oluşturuyorum.</p>
             </article>
             <article class="step">
               <div class="step-num">04</div>
-              <h3>Uygulama ve Danışmanlık</h3>
-              <p class="lead" style="font-size: 14px; margin: 0">Belirlenen stratejiyi yönlendiriyor, süreci birlikte şekillendiriyoruz.</p>
+              <h3 data-tr="Uygulama ve Danışmanlık" data-en="Implementation and Consulting">Uygulama ve Danışmanlık</h3>
+              <p class="lead" style="font-size: 14px; margin: 0" data-tr="Belirlenen stratejiyi yönlendiriyor, süreci birlikte şekillendiriyoruz." data-en="I guide the strategy and help shape the process together with you.">Belirlenen stratejiyi yönlendiriyor, süreci birlikte şekillendiriyoruz.</p>
             </article>
           </div>
         </div>
@@ -983,15 +1016,13 @@
         <div class="container">
           <div class="section-head">
             <div>
-              <h2>İletişim</h2>
+              <h2 data-tr="İletişim" data-en="Contact">İletişim</h2>
             </div>
           </div>
 
           <div class="panel">
-            <p class="lead">Benimle iletişime geçmek için aşağıdaki kanalları kullanabilirsiniz.</p>
-            <p class="lead" style="margin-top: 10px">
-              İş birliği, danışmanlık ya da proje görüşmeleri için benimle doğrudan bağlantı kurabilirsiniz.
-            </p>
+            <p class="lead" data-tr="Benimle iletişime geçmek için aşağıdaki kanalları kullanabilirsiniz." data-en="You can use the following channels to get in touch with me.">Benimle iletişime geçmek için aşağıdaki kanalları kullanabilirsiniz.</p>
+            <p class="lead" style="margin-top: 10px" data-tr="İş birliği, danışmanlık ya da proje görüşmeleri için benimle doğrudan bağlantı kurabilirsiniz." data-en="You can contact me directly for collaborations, consulting, or project inquiries.">İş birliği, danışmanlık ya da proje görüşmeleri için benimle doğrudan bağlantı kurabilirsiniz.</p>
 
             <div style="height: 18px"></div>
 
@@ -1006,11 +1037,11 @@
                 <div class="contact-head">
                   <div>
                     <h3>WhatsApp</h3>
-                    <p>Hızlı iletişim ve ilk görüşme</p>
+                    <p data-tr="Hızlı iletişim ve ilk görüşme" data-en="Quick contact and first conversation">Hızlı iletişim ve ilk görüşme</p>
                   </div>
                   <span class="contact-dot" aria-hidden="true"></span>
                 </div>
-                <span class="pill contact-action">WhatsApp’ta Bağlan</span>
+                <span class="pill contact-action" data-tr="WhatsApp'ta Bağlan" data-en="Connect on WhatsApp">WhatsApp’ta Bağlan</span>
               </a>
 
               <a
@@ -1023,11 +1054,11 @@
                 <div class="contact-head">
                   <div>
                     <h3>Instagram</h3>
-                    <p>Güncel içerikler ve marka dili</p>
+                    <p data-tr="Güncel içerikler ve marka dili" data-en="Current content and brand voice">Güncel içerikler ve marka dili</p>
                   </div>
                   <span class="contact-dot" aria-hidden="true"></span>
                 </div>
-                <span class="pill contact-action">Instagram’ı İncele</span>
+                <span class="pill contact-action" data-tr="Instagram'ı İncele" data-en="View Instagram">Instagram’ı İncele</span>
               </a>
 
               <a
@@ -1040,17 +1071,17 @@
                 <div class="contact-head">
                   <div>
                     <h3>LinkedIn</h3>
-                    <p>Profesyonel geçmiş ve bağlantı</p>
+                    <p data-tr="Profesyonel geçmiş ve bağlantı" data-en="Professional background and network">Profesyonel geçmiş ve bağlantı</p>
                   </div>
                   <span class="contact-dot" aria-hidden="true"></span>
                 </div>
-                <span class="pill contact-action">LinkedIn Profiline Git</span>
+                <span class="pill contact-action" data-tr="LinkedIn Profiline Git" data-en="Visit LinkedIn Profile">LinkedIn Profiline Git</span>
               </a>
             </div>
 
             <div style="height: 14px"></div>
             <div style="display: flex; gap: 10px; flex-wrap: wrap">
-              <a class="pill" href="#ust">Yukarı</a>
+              <a class="pill" href="#ust" data-tr="Yukarı" data-en="Back to top">Yukarı</a>
             </div>
           </div>
         </div>
@@ -1059,7 +1090,7 @@
 
     <footer class="footer">
       <div class="container footer-inner">
-        <div class="fine">Marina Feden — Dijital Stratejist &amp; Kurumsal İtibar Danışmanı</div>
+        <div class="fine" data-tr="Marina Feden — Dijital Stratejist & Kurumsal İtibar Danışmanı" data-en="Marina Feden — Digital Strategist & Corporate Reputation Consultant">Marina Feden — Dijital Stratejist &amp; Kurumsal İtibar Danışmanı</div>
         <div class="fine" id="yil"></div>
       </div>
     </footer>
@@ -1086,6 +1117,48 @@
         if (e.target instanceof HTMLAnchorElement) setNavOpen(false);
       });
 
+      (function initLang() {
+        const STORAGE_KEY = "lang";
+        const titles = {
+          tr: "Marina Feden — Dijital Stratejist & Kurumsal İtibar Danışmanı",
+          en: "Marina Feden — Digital Strategist & Corporate Reputation Consultant",
+        };
+
+        function setLang(lang) {
+          document.documentElement.lang = lang === "tr" ? "tr" : "en";
+          document.title = titles[lang];
+          try {
+            localStorage.setItem(STORAGE_KEY, lang);
+          } catch (_) {}
+
+          document.querySelectorAll("[data-tr][data-en]").forEach((el) => {
+            const text = lang === "tr" ? el.getAttribute("data-tr") : el.getAttribute("data-en");
+            if (text != null) el.textContent = text;
+          });
+
+          document.querySelectorAll("[data-aria-tr][data-aria-en]").forEach((el) => {
+            const label = lang === "tr" ? el.getAttribute("data-aria-tr") : el.getAttribute("data-aria-en");
+            if (label != null) el.setAttribute("aria-label", label);
+          });
+
+          document.querySelectorAll(".lang-switcher button").forEach((btn) => {
+            const isActive = btn.getAttribute("data-lang") === lang;
+            btn.classList.toggle("active", isActive);
+            btn.setAttribute("aria-pressed", String(isActive));
+          });
+        }
+
+        const saved = localStorage.getItem(STORAGE_KEY);
+        const lang = saved === "en" ? "en" : "tr";
+        setLang(lang);
+
+        document.querySelectorAll(".lang-switcher button").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            setLang(btn.getAttribute("data-lang"));
+          });
+        });
+      })();
+
       (function initReveal() {
         if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
         const els = document.querySelectorAll(".section, .panel, .card, .step, .portrait");
@@ -1103,3 +1176,4 @@
     </script>
   </body>
 </html>
+
