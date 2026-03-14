@@ -530,43 +530,50 @@
         transform: translateY(-1px);
       }
 
-      .contact-cards {
+      .contact-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 16px;
       }
 
       .contact-card {
         display: block;
         min-height: auto;
+        min-width: 0;
       }
 
-      .contact-card .contact-card-body {
+      .contact-grid > * {
+        min-width: 0;
+      }
+
+      .contact-head {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         gap: 14px;
       }
 
-      .contact-card .contact-card-body > div {
+      .contact-head > div {
         min-width: 0;
+        flex: 1;
         overflow-wrap: break-word;
       }
 
-      .contact-card h3 {
+      .contact-card .contact-head h3 {
         font-size: 20px;
         line-height: 1.25;
         margin-bottom: 8px;
+        overflow-wrap: break-word;
       }
 
-      .contact-card p {
+      .contact-card .contact-head p {
         margin: 0;
         color: var(--muted);
         line-height: 1.6;
         font-size: 14px;
       }
 
-      .contact-card .contact-card-dot {
+      .contact-dot {
         width: 10px;
         height: 10px;
         border-radius: 999px;
@@ -576,20 +583,59 @@
         flex: 0 0 auto;
       }
 
-      .contact-card .contact-card-spacer {
-        height: 14px;
-      }
-
-      .contact-card .contact-card-cta {
+      .contact-action {
         display: inline-flex;
         flex-wrap: wrap;
         max-width: 100%;
+        margin-top: 14px;
       }
 
       .contact-card:hover {
         transform: translateY(-3px);
         border-color: rgba(178, 138, 122, 0.4);
         box-shadow: 0 12px 40px rgba(20, 20, 20, 0.08);
+      }
+
+      @media (max-width: 900px) {
+        .contact-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 640px) {
+        .contact-grid {
+          grid-template-columns: 1fr !important;
+          gap: 14px;
+        }
+
+        .contact-card {
+          width: 100%;
+          min-width: 0;
+          padding: 18px;
+        }
+
+        .contact-card .contact-head h3 {
+          font-size: 16px;
+          line-height: 1.35;
+          margin-bottom: 6px;
+        }
+
+        .contact-card .contact-head p {
+          font-size: 13px;
+          line-height: 1.6;
+        }
+
+        .contact-head {
+          gap: 12px;
+        }
+
+        .contact-action {
+          margin-top: 12px;
+          font-size: 11px;
+          padding: 8px 12px;
+          word-break: break-word;
+          white-space: normal;
+        }
       }
 
       .portrait img {
@@ -627,43 +673,6 @@
 
         .portrait img {
           transition: none;
-        }
-      }
-
-      @media (max-width: 640px) {
-        .contact-cards {
-          grid-template-columns: 1fr;
-          gap: 14px;
-        }
-
-        .contact-card {
-          padding: 18px;
-        }
-
-        .contact-card h3 {
-          font-size: 17px;
-          line-height: 1.3;
-          margin-bottom: 6px;
-        }
-
-        .contact-card p {
-          font-size: 13px;
-          line-height: 1.65;
-        }
-
-        .contact-card .contact-card-body {
-          gap: 12px;
-        }
-
-        .contact-card .contact-card-spacer {
-          height: 12px;
-        }
-
-        .contact-card .contact-card-cta {
-          font-size: 11px;
-          padding: 8px 12px;
-          word-break: break-word;
-          white-space: normal;
         }
       }
 
@@ -940,7 +949,7 @@
 
             <div style="height: 18px"></div>
 
-            <div class="contact-cards">
+            <div class="contact-grid">
               <a
                 class="card contact-card"
                 href="https://wa.me/905318430843"
@@ -948,15 +957,14 @@
                 rel="noreferrer"
                 aria-label="WhatsApp’ta bağlan"
               >
-                <div class="contact-card-body">
+                <div class="contact-head">
                   <div>
                     <h3>WhatsApp</h3>
                     <p>Hızlı iletişim ve ilk görüşme</p>
                   </div>
-                  <span class="contact-card-dot" aria-hidden="true"></span>
+                  <span class="contact-dot" aria-hidden="true"></span>
                 </div>
-                <div class="contact-card-spacer"></div>
-                <span class="pill contact-card-cta">WhatsApp’ta Bağlan</span>
+                <span class="pill contact-action">WhatsApp’ta Bağlan</span>
               </a>
 
               <a
@@ -966,15 +974,14 @@
                 rel="noreferrer"
                 aria-label="Instagram’ı incele"
               >
-                <div class="contact-card-body">
+                <div class="contact-head">
                   <div>
                     <h3>Instagram</h3>
                     <p>Güncel içerikler ve marka dili</p>
                   </div>
-                  <span class="contact-card-dot" aria-hidden="true"></span>
+                  <span class="contact-dot" aria-hidden="true"></span>
                 </div>
-                <div class="contact-card-spacer"></div>
-                <span class="pill contact-card-cta">Instagram’ı İncele</span>
+                <span class="pill contact-action">Instagram’ı İncele</span>
               </a>
 
               <a
@@ -984,15 +991,14 @@
                 rel="noreferrer"
                 aria-label="LinkedIn profiline git"
               >
-                <div class="contact-card-body">
+                <div class="contact-head">
                   <div>
                     <h3>LinkedIn</h3>
                     <p>Profesyonel geçmiş ve bağlantı</p>
                   </div>
-                  <span class="contact-card-dot" aria-hidden="true"></span>
+                  <span class="contact-dot" aria-hidden="true"></span>
                 </div>
-                <div class="contact-card-spacer"></div>
-                <span class="pill contact-card-cta">LinkedIn Profiline Git</span>
+                <span class="pill contact-action">LinkedIn Profiline Git</span>
               </a>
             </div>
 
