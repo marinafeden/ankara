@@ -235,21 +235,6 @@
       }
       .about figcaption { margin-top: 14px; font-size: 12px; color: var(--muted); letter-spacing: 0.06em; }
 
-      /* ---------- faq ---------- */
-      .faq details { border-top: 1px solid var(--line); }
-      .faq details:first-of-type { border-top: none; }
-      .faq summary {
-        display: flex; align-items: baseline; justify-content: space-between; gap: 28px;
-        padding: 24px 0; cursor: pointer; list-style: none;
-        font-family: var(--serif); font-weight: 300; font-size: 22px; line-height: 1.3;
-        transition: color 160ms ease;
-      }
-      .faq summary::-webkit-details-marker { display: none; }
-      .faq summary:hover { color: var(--accent); }
-      .faq-sign { flex: 0 0 auto; font-family: var(--sans); font-size: 18px; color: var(--muted); transition: transform 220ms ease, color 220ms ease; }
-      .faq details[open] .faq-sign { transform: rotate(45deg); color: var(--accent); }
-      .faq-a { padding: 0 60px 28px 0; color: var(--muted); font-size: 15px; line-height: 1.8; max-width: 74ch; }
-
       /* ---------- contact ---------- */
       .cta { padding: 108px 0; border-top: 1px solid var(--line); background: var(--ink); color: var(--paper); }
       .cta h2 { font-size: clamp(32px, 4.4vw, 56px); line-height: 1.08; max-width: 18ch; }
@@ -278,7 +263,7 @@
       .rv.on { opacity: 1; transform: none; }
       @media (prefers-reduced-motion: reduce) {
         .rv { opacity: 1; transform: none; transition: none; }
-        .faq-sign, .btn, .nav-links a { transition: none; }
+        .btn, .nav-links a { transition: none; }
         html { scroll-behavior: auto; }
       }
 
@@ -314,8 +299,6 @@
         .items > .item:nth-child(2) { border-top: 1px solid var(--line); padding-top: 26px; }
         .addon { grid-template-columns: 1fr; gap: 12px; }
         .addon-meta { text-align: left; }
-        .faq summary { font-size: 19px; gap: 18px; }
-        .faq-a { padding-right: 0; }
         .cta { padding: 72px 0; }
         .channels { grid-template-columns: 1fr; gap: 22px; }
       }
@@ -345,7 +328,6 @@
           <a href="#paketler">Paketler</a>
           <a href="#bdt">BDT Pazarları</a>
           <a href="#hakkimda">Hakkımda</a>
-          <a href="#sss">S.S.S.</a>
         </nav>
         <div class="nav-cta">
           <a class="btn" href="#iletisim">Randevu Al</a>
@@ -358,7 +340,7 @@
         <div class="wrap">
           <p class="eyebrow rv">Üretici firmalar için · Ankara</p>
           <h1 class="rv" style="margin-top:26px;">Kurumsal iletişim ve iş geliştirme.</h1>
-          <p class="lead rv">Marka konsepti, ajans yönetimi, reklam denetimi ve yönetime raporlama. On yılı aşkın kurumsal iletişim deneyimi ve BDT pazarlarında ana dil düzeyinde temsil.</p>
+          <p class="lead rv">Marka konsepti, ajans yönetimi, reklam denetimi ve raporlama. On yılı aşkın kurumsal iletişim deneyimi ve BDT pazarlarında ana dil düzeyinde temsil.</p>
           <div class="hero-actions rv">
             <a class="btn" href="#iletisim">Marka röntgeni randevusu al</a>
             <a class="btn btn-ghost" href="#paketler">Çalışma modelleri</a>
@@ -380,7 +362,7 @@
               <article class="item">
                 <p class="item-num">01</p>
                 <h3>Ajans çalışıyor, sonuç belirsiz</h3>
-                <p>Her ay ajansa ödeme yapılıyor; çıkan işin ticari hedeflerle ilişkisini kimse ölçmüyor.</p>
+                <p>Her ay ajansa ödeme yapılıyor; çıkan işin ticari hedeflerle uyumu ölçülmüyor.</p>
               </article>
               <article class="item">
                 <p class="item-num">02</p>
@@ -405,10 +387,10 @@
               <article class="item">
                 <p class="item-num">06</p>
                 <h3>Markanın sahibi yok</h3>
-                <p>Şirket içinde markadan sorumlu tek bir muhatap yok; iş herkesin, dolayısıyla kimsenin.</p>
+                <p>Şirket içinde markadan sorumlu tek bir muhatap yok; iş herkesin, dolayısıyla hiç kimsenin.</p>
               </article>
             </div>
-            <p class="lead rv" style="margin-top:44px;">Bunların hiçbiri ajansın hatası değil. Ajansın da kendisine brief verecek, işi kabul edecek ve sonucu ölçecek bir muhataba ihtiyacı var. Ben tam olarak o boşluğu doldururum.</p>
+            <p class="lead rv" style="margin-top:44px;">Bunların hiçbiri ajansın hatası değil. Ajansın da kendisine brief verecek, işi kabul edecek ve sonucu ölçecek bir muhataba ihtiyacı var. İşte ben tam da bu boşluğu doldurmak için buradayım.</p>
           </div>
         </div>
       </section>
@@ -448,7 +430,7 @@
                 <p class="eyebrow" style="color:var(--accent);">Başlangıç</p>
                 <h3 style="margin-top:12px;">Marka ve Dijital Görünürlük Raporu</h3>
                 <p class="body">Web sitesi, Instagram, LinkedIn, katalog ve tanıtım malzemelerinin denetimi · üç rakip analizi · trafik ve dönüşüm analizi · konumlandırma önerisi ve kanal haritası · üç aylık taslak içerik planı · ajans için brief · yönetime sunum.</p>
-                <p class="body" style="margin-top:14px;">Aylık pakete otuz gün içinde geçilirse raporun ücreti ilk ay ödemesinden düşülür. Devam etmeseniz bile elinizde kullanabileceğiniz bir yol haritası kalır.</p>
+                <p class="body" style="margin-top:14px;">Aylık pakete otuz gün içinde geçilmesi durumunda raporun ücreti ilk ay ödemesinden düşülür. Devam etmeseniz bile elinizde kullanabileceğiniz bir yol haritası kalır.</p>
               </div>
               <div class="audit-side">
                 <span class="eyebrow">Tek seferlik · 2–3 hafta</span>
@@ -564,7 +546,7 @@
             <div class="split rv" style="margin-top:44px;">
               <div>
                 <p class="lead">Türkiye'deki hiçbir ajans, ürününüzü Rusça konuşulan pazarlara o pazarın dilinde ve o pazarın iş kültürüyle anlatamaz. Çeviri bürosu metni çevirir; konumlandırmayı çeviremez.</p>
-                <p class="lead">Ben bu pazarlarda tercümanla değil, ana dilimle çalışırım: müşteriyle doğrudan konuşur, fuarda standınızda dururum ve dönüşte size ne konuşulduğunu değil, ne anlamına geldiğini raporlarım.</p>
+                <p class="lead">Ben bu pazarlarda tercümanla değil, ana dilimle çalışırım: müşteriyle doğrudan konuşur, fuarda standınızda durur, dönüşte size ne konuşulduğunu değil, ne anlama geldiğini raporlarım.</p>
               </div>
               <ul class="facts">
                 <li><strong>Ana dil düzeyinde Rusça ve Ukraynaca</strong><span>Akıcı Türkçe, İngilizce B2</span></li>
@@ -596,47 +578,6 @@
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="sec" id="sss">
-        <div class="wrap sec-grid">
-          <div class="sec-label"><p class="eyebrow">07 — S.S.S.</p></div>
-          <div class="sec-body faq">
-            <h2 class="h2 rv" style="margin-bottom:40px;">Sıkça sorulan sorular.</h2>
-            <details class="rv">
-              <summary>Zaten bir ajansla çalışıyoruz. Size neden ihtiyacımız olsun?<span class="faq-sign" aria-hidden="true">+</span></summary>
-              <p class="faq-a">Ajansınızı değiştirmenizi önermiyorum; ajansınızın işini kolaylaştırıyorum. Bugün ajansa brief veren, çıkan işi standarda göre kabul eden ve sonucu ölçen bir muhatabınız yoksa, ajans kendi tahminiyle üretmek zorunda kalır. Ben o muhatap olurum: neyin, neden ve kime üretileceğine karar verir, işi denetler, performansı yönetime raporlarım.</p>
-            </details>
-            <details class="rv">
-              <summary>Neden kadroya bir kurumsal iletişim müdürü almayalım?<span class="faq-sign" aria-hidden="true">+</span></summary>
-              <p class="faq-a">Alabilirsiniz — ihtiyacınız gerçekten tam zamanlıysa doğru karar da olur. Ancak orta ölçekli bir üretici firmada bu işin hacmi çoğu zaman haftanın üç gününü aşmaz. Kadro, maaşın yanında SGK işveren payı, kıdem ve ihbar tazminatı karşılığı, yıllık izin ve çalışma alanı demektir; ayrıca yanlış işe alımın maliyeti yüksektir. Bu modelde aynı fonksiyonu, iş sözleşmesi yükümlülüğü olmadan ve çeyrek sonunda durdurulabilir şekilde alırsınız.</p>
-            </details>
-            <details class="rv">
-              <summary>İçeriği siz mi çekiyorsunuz?<span class="faq-sign" aria-hidden="true">+</span></summary>
-              <p class="faq-a">Hayır. Fotoğraf, video ve grafik tasarım ajansın ya da serbest tedarikçilerin işidir. Ben konsepti kurar, brief'i yazar, çıkan işi denetler ve yayına onay veririm. Bu ayrım bilinçlidir: üreten ve denetleyen aynı kişi olduğunda ortada kalite kontrolü diye bir şey kalmaz.</p>
-            </details>
-            <details class="rv">
-              <summary>Sonucu nasıl ölçüyorsunuz?<span class="faq-sign" aria-hidden="true">+</span></summary>
-              <p class="faq-a">Her ay yönetime tek sayfalık bir rapor sunarım: web sitesi trafiği ve kaynakları, sosyal medya etkileşimi, reklam harcaması ve talep başına maliyet, gelen talebin sayısı ve niteliği. Rapor beğeni sayısını değil, bu ay hangi kararı almanız gerektiğini anlatır.</p>
-            </details>
-            <details class="rv">
-              <summary>Ne kadar sürede sonuç görürüz?<span class="faq-sign" aria-hidden="true">+</span></summary>
-              <p class="faq-a">İlk ayda düzen kurulur: kim ne yapıyor, hangi kanal ne için var, ölçüm nasıl işliyor. Üçüncü aya doğru içerik ve reklam tarafında ölçülebilir iyileşme görülür. Nitelikli talep ve ihracat bağlantısı gibi sonuçlar ise sektöre ve satış döngünüze bağlıdır — kimseye üç ayda müşteri sözü vermem.</p>
-            </details>
-            <details class="rv">
-              <summary>Aynı anda kaç firmayla çalışıyorsunuz?<span class="faq-sign" aria-hidden="true">+</span></summary>
-              <p class="faq-a">En fazla iki. Bu model ancak firmanın işini gerçekten tanıdığımda çalışır; portföyü büyütmek doğrudan kaliteyi düşürür. Ayrıca sözleşme süresince aynı sektör ve bölgedeki doğrudan rakibinizle çalışmam.</p>
-            </details>
-            <details class="rv">
-              <summary>Ücretlendirme nasıl işliyor?<span class="faq-sign" aria-hidden="true">+</span></summary>
-              <p class="faq-a">Kapsam ilk görüşmede netleşir, ardından firmanıza özel yazılı teklif paylaşırım. Aylık paketlerde ücret ayın başında peşin ödenir; proje bazlı işlerde yarısı başlangıçta, yarısı teslimde. Tüm tutarlara KDV hariçtir ve ücret her altı ayda bir TÜFE oranı esas alınarak güncellenir.</p>
-            </details>
-            <details class="rv">
-              <summary>Ankara dışındayız. Yine de çalışabilir miyiz?<span class="faq-sign" aria-hidden="true">+</span></summary>
-              <p class="faq-a">Evet. Çalışma esas olarak uzaktan yürür; Ankara'da yerinde çalışma yalnızca en kapsamlı pakette ve mutabık kalınan günlerdedir. Fuar, toplantı ve saha çalışması için Türkiye içinde ve bölgede seyahat ederim.</p>
-            </details>
           </div>
         </div>
       </section>
@@ -713,15 +654,6 @@
         els.forEach((el) => io.observe(el));
       })();
 
-      // FAQ: tek seferde tek soru açık kalsın
-      document.querySelectorAll("#sss details").forEach((d) => {
-        d.addEventListener("toggle", () => {
-          if (!d.open) return;
-          document.querySelectorAll("#sss details").forEach((o) => {
-            if (o !== d) o.open = false;
-          });
-        });
-      });
     </script>
   </body>
 </html>
